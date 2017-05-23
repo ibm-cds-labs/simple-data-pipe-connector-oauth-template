@@ -24,7 +24,8 @@
     "passport-oauth": "https://github.com/jaredhanson/passport-oauth",
     "path": "^0.12.7",
     "simple-data-pipe-sdk": "git://github.com/ibm-cds-labs/simple-data-pipe-sdk.git",
-    "util": "^0.10.3"
+    "util": "^0.10.3",
+    "snyk": "^1.30.1"
   },
   "author": {
     "name": "ptitzler@us.ibm.com"
@@ -33,5 +34,10 @@
   "bugs": {
     "url": "https://github.com/ibm-cds-labs/simple-data-pipe-connector-oauth-template/issues"
   },
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
